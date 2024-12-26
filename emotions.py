@@ -1,8 +1,22 @@
-import streamlit as st
 import pandas as pd
-from google.oauth2 import service_account
-import gspread
+import matplotlib.pyplot as plt
+import numpy as np
+import streamlit as st
+import plotly.express as px
+import plotly.graph_objects as go
+import pandas as pd
+import numpy as np
+import streamlit as st
 from datetime import datetime
+from workalendar.america import Argentina
+import math
+from scipy.stats import norm
+from datetime import datetime, timedelta
+from io import BytesIO
+from oauth2client.service_account import ServiceAccountCredentials
+import gspread
+from pathlib import Path
+from google.oauth2 import service_account
 
 # Configuración inicial de la página de Streamlit
 st.set_page_config(page_title="Registro de Pensamientos Negativos", layout="wide")
@@ -68,11 +82,10 @@ sheet = client.open_by_key(sheet_id).sheet1
 
 # Opciones predefinidas de pensamientos negativos
 opciones_pensamientos = [
-    "No soy lo suficientemente bueno/a",
-    "Siempre cometo errores",
-    "Nadie me entiende",
-    "No voy a lograr mis objetivos",
-    "Siento que estoy fallando en todo"
+    "Que va a pensar x de esto",
+    "A nadie le importa lo que hago",
+    "No soy lo suficientemente interesante",
+    "No me se expresar bien",
 ]
 
 # Formulario para seleccionar pensamientos negativos
