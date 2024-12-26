@@ -86,6 +86,7 @@ opciones_pensamientos = [
     "A nadie le importa lo que hago",
     "No soy lo suficientemente interesante",
     "No me se expresar bien",
+    "No soy lo suficientemente bueno",
 ]
 
 # Formulario para seleccionar pensamientos negativos
